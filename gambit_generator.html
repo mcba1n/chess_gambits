@@ -1,0 +1,16 @@
+<html>
+<head>
+    <script src="gambits.js"></script>
+</head>
+<body>
+    <h1>Chess gambits!</h1>
+    <button onClick="getRandomGambit()">Get Random Gambit</button>
+    <div id="gambit_field"></div>
+</body>
+<script>
+    function getRandomGambit() {
+        var rand_int = Math.floor(Math.random()*gambits.length);
+        document.getElementById('gambit_field').innerText = JSON.stringify(gambits[rand_int], null, 1);
+    }
+</script>
+</html>
